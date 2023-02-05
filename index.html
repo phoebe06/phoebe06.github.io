@@ -1,42 +1,213 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>YaHsuan</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<style>
+ #row{
+   text-align: center;
+ }
+  .box{
+    border: #000 solid 2px;
+    margin:0px;
+    padding: 0px;
+    width: 500px;
+    height: 200px;
+  }
+  .box:hover{
+    transform: scale(2);
+    transition: all .5s 0s ease;
+  }
+  iframe{
+    width: 500px;
+    height:200px;
+  }
+  .container1{
+    height: 500px;
+  }
+ 
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <html>
-    <body>
-        第一個數 : <input id="a" type="text" />
-        <br> <br>
-        第二個數 : <input id="b" type="text" />
-        <br> <br>
-        <button onclick="sum()">+</button>
-        <button onclick="minus()">−</button>
-        <button onclick="mutiple()">×</button>
-        <button onclick="divide()">÷</button>
-        <br> <br>
-        <output id="c"></output>
-        
-    <script>
-        function sum(a,b)
-        {
-            var a = parseInt(document.getElementById('a').value);
-            var b = parseInt(document.getElementById('b').value);
-            document.getElementById('c').value = a+b
-        }
-        function minus(a,b)
-        {
-            var a = parseInt(document.getElementById('a').value);
-            var b = parseInt(document.getElementById('b').value);
-            document.getElementById('c').value = a-b
-        }
-        function mutiple(a,b)
-        {
-            var a = parseInt(document.getElementById('a').value);
-            var b = parseInt(document.getElementById('b').value);
-            document.getElementById('c').value = a*b
-        }
-        function divide(a,b)
-        {
-            var a = parseInt(document.getElementById('a').value);
-            var b = parseInt(document.getElementById('b').value);
-            document.getElementById('c').value = a/b
-        }
-    </script>
-    </body>
+  <head>
+    
+    <title>YaHsuan - Website</title>
+  </head>
+  <body>
+<!--  Navigation Bar    -->
+    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">CYH</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarButtons" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarButtons">          
+          <ul class="nav navbar-nav navbar-right">
+            <li id="navAbout" class="btn navbar-btn navActive">Game</li>
+            <li id="navServices" class="btn navbar-btn">Calculator</li>
+            <li id="navContact" class="btn navbar-btn">Timer</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--  Top page image    -->
+ <div class="parallaxTop">
+   <div class="jumboBanner shadow">
+     <h1 class="banner">YaHsuan</h1>
+     <h3 class="motto">Love / Epoch / Epiphany</h3>
+     <button id="bannerBtn" class="bannerBtn">GO ! </button>
+   </div>
+ </div>
+<!--  Main content   -->    
+<!--  About row      -->
+<div id="aboutBlock" class="container">
+  <div id="aboutRow" class="row">
+    <div class="aboutLeft col-xs-12 col-sm-6 cloak">
+      <h3 style="margin: 100px;">Dinosaur Game是一款由Google開發的網頁遊戲
+        <br>
+        玩家在橫向捲軸形式的恐龍遊戲中
+        <br>
+        操控一隻像素風格的小暴龍避開障礙物並取得分數
+        <br>
+        該遊戲由Chrome用戶體驗團隊於2014年開發。</h3>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="row"></div>
+      </div>
+    </div>
+    <div class="aboutRight col-xs-12 col-sm-6">
+      <div id="aboutBlock" class="container">        
+        <h2>Game</h2>
+        <hr />
+        <div class="box" style="background-color: #fff;">
+        <iframe src="https://offline-dino-game.firebaseapp.com/"> </iframe>
+        </div>
+      </div>
+      <div class="col-md-3"></div>          
+    </div>
+  </div>
+</div>
+<!--  Services row      -->
+<div id="servicesRow" class="parallaxSection">
+  <div class="shadowSection">
+    <h2>SERVICES</h2>
+    <hr />
+  </div>
+</div>
+<div id="serviceBlocks" class="row">
+  <div class="container1">
+    <div class="serviceBlock col-md-4">
+      
+    </div>
+    <div class="serviceBlock col-md-4">
+      
+    </div>
+    <div class="serviceBlock col-md-4">
+      
+    </div>
+  </div>
+</div>
+
+   
+ 
+        <div id="contactRow" class="contactForm row">
+          <h2>GSAT Timer</h2>
+          <hr />
+          <br>
+          <script language="JavaScript">   
+            function ShowTimes(){  
+                var AfterTime= new Date("Jan 19 00:00:00  2024");  
+                LeaveTime = AfterTime - new Date();  
+                LeaveDays=Math.floor(LeaveTime/(1000*60*60*24));//天    
+                LeaveHours=Math.floor(LeaveTime/(1000*60*60)%24);//時    
+                LeaveMinutes=Math.floor(LeaveTime/(1000*60)%60);//分    
+                LeaveSeconds=Math.floor(LeaveTime/1000%60);//秒    
+                var c=new Date();  
+                var q=c.getMilliseconds();  
+                if(q<10){                               //因为毫秒为一位数时只占一个字符位置，会让毫秒二字变动位置   
+                   q="00"+c.getMilliseconds();    
+                }    
+                if(q>=10 && q<100){                     //因为毫秒为两位数时只占两个字符位置，会让毫秒二字变动位置  
+                    q="0"+c.getMilliseconds();    
+                }  
+            if(LeaveDays<0){ 
+            document.getElementById("tian").innerHTML='00';  
+            } 
+            else{ 
+            document.getElementById("tian").innerHTML=LeaveDays;  
+            } 
+             
+            if(LeaveHours<0){ 
+            document.getElementById("shi").innerHTML='00';  
+            } 
+            else{ 
+            document.getElementById("shi").innerHTML=LeaveHours;  
+            } 
+             
+            if(LeaveMinutes<0){ 
+            document.getElementById("fen").innerHTML='00';  
+            } 
+            else{ 
+            document.getElementById("fen").innerHTML=LeaveMinutes;  
+            } 
+             
+            if(LeaveSeconds<0){ 
+            document.getElementById("miao").innerHTML='00';  
+            } 
+            else{ 
+            document.getElementById("miao").innerHTML=LeaveSeconds;  
+            }  
+                hxtime.innerHTML="<font color=red>"+LeaveDays+"</font>天<font color=red>"+LeaveHours+"</font>時<font color=red>"+LeaveMinutes+"</font>分<font color=red>"+LeaveSeconds+"</font>秒";    
+            }    
+            setInterval(ShowTimes,10);    
+            </script>  
+            <div style="font-weight: bolder; font-size: 40px; text-align:center">距離113學測剩</div>
+            <div style="font-weight: bolder; font-size: 42px; text-align:center"" id="hxtime"></div>  
+            <div style="display: none;" id="tian"></div>   
+            <div style="display: none;" id="shi"></div>   
+            <div style="display: none;" id="fen"></div>   
+            <div style="display: none;" id="miao"></div>  
+        </div>        
+      </div>
+<!--  Contact info      -->
+    <div id="contactInfo" class="row">
+      <div class="container">
+        <div class="contactStack col-md-4">
+          
+        </div>
+        <div class="contactStack col-md-4">
+         
+        </div>
+        <div class="contactStack col-md-4">
+          
+        </div>
+      </div>
+    </div>
+<!--  Copyright    -->
+    <div id="copyright" class="row">
+      <div class="container">
+        <div id="socialBtn">
+          <a href="https://www.instagram.com/zray8632/" class="social"><img src="ig.png" style="opacity: 0.7;"></a>
+          <a href="https://www.instagram.com/phoebechang0708/" class="social"><img src="ig.png" style="opacity: 0.7;"></a>
+          <a href="https://www.instagram.com/young._.630/" class="social"><img src="ig.png" style="opacity: 0.7;"></a>
+        </div>
+        <p>2023. LYJ & CYH & KCY</p>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
