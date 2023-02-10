@@ -58,9 +58,12 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarButtons">          
           <ul class="nav navbar-nav navbar-right">
-            <li id="navAbout" class="btn navbar-btn navActive">Timer</li>
-            <li id="navServices" class="btn navbar-btn">Game</li>
-            <li id="navContact" class="btn navbar-btn">Calculator</li>
+            <li id="navAbout" class="btn navbar-btn navActive">
+              <a href="#title3">Timer</a></li>
+            <li id="navServices" class="btn navbar-btn">
+              <a href="#title1">Game</a></li>
+            <li id="navContact" class="btn navbar-btn">
+              <a href="#title2">Calculator</a></li>
           </ul>
         </div>
       </div>
@@ -75,7 +78,9 @@
  </div>
 <!--  Main content   -->
 <br><br><br>  
+<article id="title3">
 <h2 style="color:#000; text-align: center;">GSAT Timer</h2>
+</article>
             <hr />
           </div>
           <br>
@@ -126,8 +131,8 @@
             }    
             setInterval(ShowTimes,10);    
             </script>  
-            <div style="font-weight: bolder; font-size: 40px; text-align:center">113學測倒數</div>
-            <div style="font-weight: bolder; font-size: 42px; text-align:center"" id="hxtime"></div>  
+            <div id="title1" style="font-weight: bolder; font-size: 40px; text-align:center">113學測倒數</div>
+            <div style="font-weight: bolder; font-size: 42px; text-align:center" id="hxtime"></div>  
             <div style="display: none;" id="tian"></div>   
             <div style="display: none;" id="shi"></div>   
             <div style="display: none;" id="fen"></div>   
@@ -173,7 +178,7 @@
 <!--  Services row      -->
 <div id="servicesRow" class="parallaxSection">
   <div class="shadowSection">
-    <h2>Calculator</h2>
+    <h2 id="title2">Calculator</h2>
     <hr />
   </div>
 </div>
